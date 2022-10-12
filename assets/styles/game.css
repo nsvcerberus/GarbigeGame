@@ -1,0 +1,29 @@
+.wasteboxes {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.wasteboxes > div {
+  --width: 25%;
+  display: flex;
+  width: var(--width);
+  height: calc(var(--width) * 2);
+  background-size: cover;
+}
+
+.wasteboxes > .glass {
+  background-image: url('../../assets/images/game/wasteboxes/blue/wastebox.png');
+}
+
+.wasteboxes > .metal {
+  background-image: url('../../assets/images/game/wasteboxes/green/wastebox.png');
+}
+
+.wasteboxes > .paper {
+  background-image: url('../../assets/images/game/wasteboxes/red/wastebox.png');
+}
+
+.wasteboxes > .wood {
+  background-image: url('../../assets/images/game/wasteboxes/yellow/wastebox.png');
+}
