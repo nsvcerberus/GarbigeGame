@@ -1,0 +1,147 @@
+.garbige-game {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+
+  .layouts {
+    $background-color-layouts: #fff;
+    $title-color: #182c73;
+    $size-factory: 180px;
+
+    width: 620px;
+    height: 560px;
+    position: relative;
+    background-color: $background-color-layouts;
+    border-radius: 40px;
+    overflow: hidden;
+
+    > div {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      float: left;
+
+      .title {
+        width: 100%;
+        text-align: center;
+        color: $title-color;
+      }
+    }
+
+    .layout-start {
+      justify-content: center;
+      align-items: center;
+
+      .button-start {
+        $size: 150px;
+
+        display: flex;
+        width: $size;
+        height: $size;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 42px;
+        background-color: #af63e6;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
+    .layout-gameplay {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .garbiges {
+        display: grid;
+        height: 100%;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-content: center;
+
+        .factory {
+          width: $size-factory;
+          height: $size-factory;
+          position: relative;
+
+          .timer {
+            $thickness: 22px;
+            $background-color: #d3a8f0;
+            $size: $size-factory + $thickness * 2;
+
+            width: $size;
+            height: $size;
+            position: absolute;
+            margin-top: -$thickness;
+            margin-left: -$thickness;
+            background-color: $background-color;
+            border-radius: 50%;
+
+            &::after {
+              content: '';
+              width: $size-factory;
+              height: $size-factory;
+              position: absolute;
+              float: left;
+              margin-top: $thickness;
+              margin-left: $thickness;
+              background-color: $background-color-layouts;
+              border-radius: 50%;
+            }
+          }
+
+          .spawn {
+            background-color: #f9f8f8;
+          }
+        }
+      }
+
+      .wasteboxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        > div {
+          width: 120px;
+          height: 100px;
+          cursor: pointer;
+
+          .wastebox {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
+
+          &.recyclables {
+            .wastebox {
+              background-image: url(images/wasteboxes/yellow/wastebox.png);
+            }
+          }
+
+          &.mixed {
+            .wastebox {
+              background-image: url(images/wasteboxes/green/wastebox.png);
+            }
+          }
+
+          &.household {
+            .wastebox {
+              background-image: url(images/wasteboxes/blue/wastebox.png);
+            }
+          }
+
+          &.dangerous {
+            .wastebox {
+              background-image: url(images/wasteboxes/red/wastebox.png);
+            }
+          }
+        }
+      }
+    }
+  }
+}

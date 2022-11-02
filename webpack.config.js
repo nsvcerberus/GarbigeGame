@@ -4,11 +4,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: [
-    './src/application.ts'
+    './src/application/Application.ts'
   ],
   output: {
-    filename: 'scripts/application.js',
+    filename: 'scripts/app.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]',
     clean: true
   },
   devtool: 'inline-source-map',
@@ -16,7 +17,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Application',
       filename: 'index.html',
-      template: 'src/html/index.html'
+      template: 'src/index.html'
     }),
     new MiniCssExtractPlugin({
       filename: "styles/style.css"
@@ -39,14 +40,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
+          'sass-loader',
         ]
-      }
+      }/* ,
+      {
+        test: /\.png/,
+        type: 'asset/resource'
+      } */
     ],
   },
   resolve: {

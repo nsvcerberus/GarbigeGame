@@ -1,5 +1,5 @@
 /* import Button from '../../../../../../application/modules/global/user-interface/Button'; */
-import Button from '../../../../../../modules/global/user-interface/Button';
+import Button from '../../../../../../scripts/view/user-interface/Button';
 /* import { gameManager } from '../../../../../modules/games/garbige/GarbigeGame' */
 import anime from 'animejs'
 

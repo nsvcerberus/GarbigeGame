@@ -1,4 +1,4 @@
-import Button from '../../../../../../../modules/global/user-interface/Button';
+import Button from '../../../../../../../scripts/view/user-interface/Button';
 import { GarbigeTypes } from '../../../GarbigeTypes';
 
 export default class Wastebox extends Button {
