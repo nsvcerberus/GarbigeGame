@@ -1,5 +1,3 @@
-/* import View from "../../../../global/view/View"; */
+import Controller from "../../../../../../scripts/view/Controller";
 
-export default abstract class Layout /* extends View */ {
-
-}
+export default abstract class Layout extends Controller { }

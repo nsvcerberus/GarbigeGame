@@ -1,5 +1,5 @@
 import Controller from "../../../../../../scripts/view/Controller";
-/* import { GameEventEmitter, GameEvents } from "../../../GameEventEmitter"; */
+import { garbigeGameEventEmitter, GameEvents } from "../../../GarbigeGameEventEmitter";
 
 export default class StartLayoutController extends Controller {
   constructor(id: string) {
@@ -8,6 +8,6 @@ export default class StartLayoutController extends Controller {
   }
 
   private subscribe(): void {
-    /* gameEventEmitter.subscribe(GameEvents.Start, () => this.hide()); */
+    garbigeGameEventEmitter.subscribe(GameEvents.Start, () => this.hide());
   }
 }

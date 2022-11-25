@@ -1,12 +1,16 @@
 export default abstract class Controller {
-  private readonly _view: HTMLElement;
+  protected readonly _view?: HTMLElement;
 
   constructor(id: string) {
-    this._view = document.getElementById(id) ?? document.body;
+    this._view = document.getElementById(id) ?? undefined;
   }
 
-  public get view(): HTMLElement {
-    return this._view;
+  public get view(): HTMLElement | never {
+    if (this._view != undefined) {
+      return this._view;
+    }
+
+    throw new Error('Element is undefined!');
   }
 
   protected show(): void {

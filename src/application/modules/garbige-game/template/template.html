@@ -1,8 +1,8 @@
 <section id="garbige-game" class="garbige-game">
   <div class="layouts">
 
-    <div class="layout-gameplay">
-      <h1 class="title">{layouts.gameplay.title}</h1>
+    <div class="garbige-game-layout-gameplay">
+      <h1 class="title">{text:layouts.gameplay.title}</h1>
 
       <div class="garbiges">
         <div>
@@ -11,8 +11,12 @@
         <div>
           <div class="factory">
             <div id="timer" class="timer">
-              <div class="tip"></div>
-              <div id="tip-rotation" class="tip"></div>
+              <div class="tip">
+                <div class="circle"></div>
+              </div>
+              <div class="tip start">
+                <div class="circle"></div>
+              </div>
             </div>
             <div id="spawn" class="spawn"></div>
           </div>
@@ -43,7 +47,7 @@
     </div>
 
     <div id="garbige-game-layout-start" class="layout-start">
-      <div id="garbige-game-button-start" class="button-start">{layouts.start.button}</div>
+      <div id="garbige-game-button-start" class="button-start">{text:layouts.start.button}</div>
     </div>
 
     <!-- <div id="layout-finish">

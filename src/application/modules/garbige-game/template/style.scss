@@ -93,6 +93,23 @@
               background-color: $background-color-layouts;
               border-radius: 50%;
             }
+
+            .tip {
+              display: flex;
+              width: $size;
+              height: $size;
+              position: absolute;
+              justify-content: center;
+
+              &::after {
+                content: '';
+                width: $thickness;
+                height: $thickness;
+                position: absolute;
+                background-color: $background-color;
+                border-radius: 50%;
+              }
+            }
           }
 
           .spawn {

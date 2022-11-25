@@ -1,9 +1,9 @@
 /* import Button from '../../../../../../application/modules/global/user-interface/Button'; */
-import Button from '../../../../../../scripts/view/user-interface/Button';
+import ButtonController from '../../../../../../scripts/view/user-interface/ButtonController';
 /* import { gameManager } from '../../../../../modules/games/garbige/GarbigeGame' */
 import anime from 'animejs'
 
-export default class ButtonStart extends Button {
+export default class ButtonStart extends ButtonController {
   private _animationPlaying:Boolean = false;
 
   /* constructor(tagId:string) {

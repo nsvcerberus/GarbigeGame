@@ -1,28 +1,14 @@
 const template = require('./template/template.html').default;
 import './template/style.scss';
-import Services from "./services/Services";
-import Modules from "./modules/Modules";
 
-class Application {
-  private readonly _services: Services = new Services();
-  private _modules: Modules;
+import Module from './modules/Module';
+import ApplicationModule from "./ApplicationModule";
+import { garbigeGame } from './modules/garbige-game/GarbigeGame';
 
-  constructor() {
-    this._services.htmlInserter.add(template);
-  }
+const elementPopUp = document.getElementById('pop-up') ?? document.body;
 
-  public initModules(): void {
-    this._modules = new Modules();
-  }
+const modules: [Module, HTMLElement][] = [
+  [garbigeGame, elementPopUp]
+];
 
-  public get services(): Services {
-    return this._services;
-  }
-
-  public get modules(): Modules {
-    return this._modules;
-  }
-}
-
-export const application: Application = new Application();
-application.initModules();
+new ApplicationModule({template}, modules);

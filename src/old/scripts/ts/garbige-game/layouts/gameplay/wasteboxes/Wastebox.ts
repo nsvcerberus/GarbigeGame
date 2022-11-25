@@ -1,7 +1,7 @@
-import Button from '../../../../../../../scripts/view/user-interface/Button';
+import ButtonController from '../../../../../../../scripts/view/user-interface/ButtonController';
 import { GarbigeTypes } from '../../../GarbigeTypes';
 
-export default class Wastebox extends Button {
+export default class Wastebox extends ButtonController {
   /* private readonly _garbigeType: GarbigeTypes; */
 
   /* constructor(garbigeType: GarbigeTypes, tagId: string) {

@@ -1,8 +1,8 @@
-/* import { gameEventEmitter } from "../../../GameEventEmitter"; */
-import Button from "../../../../../../scripts/view/user-interface/Button";
+import { garbigeGameEventEmitter } from "../../../GarbigeGameEventEmitter";
+import ButtonController from "../../../../../../scripts/view/user-interface/ButtonController";
 import anime from 'animejs'
 
-export default class ButtonStartController extends Button {
+export default class ButtonStartController extends ButtonController {
   private _animationPlaying:Boolean = false;
 
   protected click(): void {
@@ -16,7 +16,7 @@ export default class ButtonStartController extends Button {
       })
       .finished.then(() => {
         this._animationPlaying = false;
-        /* gameEventEmitter.onStart(); */
+        garbigeGameEventEmitter.onStart();
       });
     }
   }

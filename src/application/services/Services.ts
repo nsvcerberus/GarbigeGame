@@ -1,25 +1,11 @@
-import HtmlInserter from "./types/HtmlInserter";
+import HtmlManager from "./HtmlManager";
 
-export default class Services {
-  private _htmlInserter: HtmlInserter = new HtmlInserter();
+class Services {
+  private _htmlManager: HtmlManager = new HtmlManager();
 
-  public get htmlInserter(): HtmlInserter {
-    return this._htmlInserter;
+  public get htmlInserter(): HtmlManager {
+    return this._htmlManager;
   }
-
-  /*
-  private _services: Map<string, Service> = new Map<string, Service>();
-
-  constructor(services: Service[]) {
-    services.forEach(service => this.add(service))
-  }
-
-  public add(service: Service): void {
-    this._services.set(service.name, service);
-  }
-
-  public get<T>(name: string): T {
-    return this._services.get(name) as T;
-  }
-  */
 }
+
+export const services = new Services();

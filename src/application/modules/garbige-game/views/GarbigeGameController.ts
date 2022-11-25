@@ -1,6 +1,6 @@
 import Controller from "../../../../scripts/view/Controller";
 
-export default class GarbigeGameController extends Controller {
+class GarbigeGameController extends Controller {
   constructor(id: string) {
     super(id);
   }
